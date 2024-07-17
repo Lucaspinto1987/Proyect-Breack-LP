@@ -1,6 +1,13 @@
 
 function generarPassword(longitud) {
 
+    const longitudMinima = 12;
+    const longitudMaxima =50;
+
+    if (longitud < longitudMinima || longitud > longitudMaxima) {
+        throw new Error(`La longitud de la contraseña debe ser entre ${longitudMinima} y ${longitudMaxima} caracteres.`);
+    }
+
     const mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const minusculas = "abcdefghijklmnopqrstuvwxyz";
     const numeros = "0123456789";
@@ -23,8 +30,6 @@ function generarPassword(longitud) {
 
     // let randomPassword = arrayMayusculas[randomMayusculas] +  arrayMinusculas[randomMinusculas] + arrayNumeros[randomNumeros] + arraySimbolos[randomSimbolos];
     // console.log(randomPassword);
-
-
     const allCharacters = [...arrayMayusculas, ...arrayMinusculas, ...arrayNumeros, ...arraySimbolos];
 
     let password = "";
@@ -34,10 +39,22 @@ function generarPassword(longitud) {
         
     }
     return password;
-   
-
 }
-console.log(generarPassword(13))
+
+console.log(generarPassword(12))
+
+function generarYMostrarContrasena() {
+    const longitud = document.getElementById('inputLongitud').value;
+    try {
+        const password = generarPassword(parseInt(longitud));
+        document.getElementById('password').textContent = `Contraseña generada: ${password}`;
+    } catch (error) {
+        console.error(error.message);
+        document.getElementById('password').textContent = "";
+        alert(error.message); // Muestra un mensaje de alerta en caso de error
+    }
+}
+
 
 // const mayusculas = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
 // const minusculas = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
