@@ -2,8 +2,8 @@
 /* DEBAJO DE ESTA LINEA CREARE EL ESTILO PARA LA PAGINA DE RELOJ DIGITAL */
 body  {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:center;
+  align-items:center;
   height: 100vh;
   margin: 0;
   background-color: #333;
