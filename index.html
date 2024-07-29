@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-  </head>
-  <body>
-    <h1>Index</h1>
-    <nav class="flex_container">
-      <ul class="nav_flex_ul">
-        <button>
-          <a href="./html/passwordCreator.html">Password Creator</a>
-        </button>
-        <button><a href="./html/relojDigital.html">Reloj Digital</a></button>
-        <button>
-          <a href="./html/weatherStation.html">Weather Station</a>
-        </button>
-        <button><a href="./html/pageLinks.html">Page Links</a></button>
-      </ul>
-    </nav>
-  </body>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <div class="iframe-container">
+        <iframe src="../html/passwordCreator.html" title="Password Creator"></iframe>
+        <iframe src="../html/pageLinks.html" title="Page Links"></iframe>
+        <iframe src="../html/weatherStation.html" title="Weather Station"></iframe>
+        <iframe src="../html/relojDigital.html" title="Reloj Digital"></iframe>
+    </div>
+
+    <footer>
+        <ul>
+            <li><button><a href="../html/passwordCreator.html">Password Creator</a></button></li>
+            <li><button><a href="../html/pageLinks.html">Page Links</a></button></li>
+            <li><button><a href="../html/weatherStation.html">Weather Station</a></button></li>
+            <li><button><a href="../html/relojDigital.html">Reloj Digital</a></button></li>
+        </ul>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
 </html>

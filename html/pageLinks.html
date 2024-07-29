@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page links</title>
-  </head>
-
-  <body>
-    <h1>Page links</h1>
-    <nav class="flex_container">
-      <ul class="nav_flex_container">
-        <button>
-          <a href="../html/passwordCreator.html">Password Creator</a>
-        </button>
-        <button><a href="../html/relojDigital.html">Reloj Digital</a></button>
-        <button>
-          <a href="../html/weatherStation.html">Weather Station</a>
-        </button>
-        <button>
-          <a href="../index.html">Index</a>
-        </button>
-      </ul>
-    </nav>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Links</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listado de Links</h1>
+        <div class="input-group">
+            <input type="text" id="titulo" placeholder="Título del link">
+            <br>
+            <input type="text" id="link" placeholder="URL del link">
+            <br>
+            <button id="addLinkButton">Añadir Link</button>
+        </div>
+        <ul id="linkList"></ul>
+    </div>
     <script src="../js/pageLinks.js"></script>
-  </body>
+</body>
+<footer>
+  <ul class="nav_flex_ul">
+    <!-- <li><button><a href="../html/passwordCreator.html" target="_blank">Password Creator</a></button></li>
+    <li><button><a href="../html/relojDigital.html" target="_blank">Reloj Digital</a></button></li>
+    <li><button><a href="../html/weatherStation.html" target="_blank">Weather Station</a></button></li> -->
+    <li><button><a href="../index.html" target="_blank">Index</a></button></li>
+  </ul>
+</footer>
 </html>
+
+
+
+  
